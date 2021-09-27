@@ -2,7 +2,7 @@
  */
 public class Dragon implements Drivable, Domesticatable, Tradable {
     private String name;
-    private int maxSpeed;;
+    private int maxSpeed;
     private boolean fireBreath;
 
     public Dragon(String name, boolean domesticated) {
@@ -36,6 +36,9 @@ public class Dragon implements Drivable, Domesticatable, Tradable {
         return 1000;
     }
 
+    /**
+     * We will pretend that this is documented now./
+     **/
     public String breatheFire() {
         if (fireBreath == true) {
             return (this.name + " has laid a city to waste.");
