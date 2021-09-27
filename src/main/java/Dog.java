@@ -6,7 +6,7 @@ public class Dog implements Tradable, Domesticatable {
 
     @Override
     public String sound() {
-        return "Bow wow!!";
+        return "Bow-wow!";
     }
 
     public Dog(String name, int avgLifespan) {
