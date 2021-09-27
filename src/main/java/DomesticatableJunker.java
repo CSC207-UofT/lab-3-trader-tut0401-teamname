@@ -1,30 +1,30 @@
 
 public class DomesticatableJunker implements Domesticatable, Drivable, Tradable{
 
-    private int MaxSpeed;
+    private int maxSpeed;
 
     public DomesticatableJunker(){
-        this.MaxSpeed = 5;
+        this.maxSpeed = 5;
     }
 
     @Override
     public String sound() {
-        return "V" + stringMultiply("RRR", MaxSpeed) + (stringMultiply("OO", MaxSpeed)) + "M";
+        return "V" + stringMultiply("RRR", maxSpeed) + (stringMultiply("OO", maxSpeed)) + "M";
     }
 
     @Override
     public void upgradeSpeed() {
-        MaxSpeed++;
+        maxSpeed++;
     }
 
     @Override
     public void downgradeSpeed() {
-        MaxSpeed--;
+        maxSpeed--;
     }
 
     @Override
     public int getMaxSpeed() {
-        return MaxSpeed;
+        return maxSpeed;
     }
 
     @Override
@@ -49,5 +49,11 @@ public class DomesticatableJunker implements Domesticatable, Drivable, Tradable{
      * @return a new string that is OrgString concatenated with itself x times
      */
 
-    private static String stringMultiply(String OrgString, int x){ /* Here have this entire method in one line*/ /* Creates the string to be returned */ String newString = ""; /* a for loop that concatenates a string with itself x times */ for (int i = 0; i < x; i++) { /* concatenating the string */ newString += OrgString; } /* returning the string */ return newString; /* An extra comment to emphasize that excess comments are bad */ }
+    private static String stringMultiply(String OrgString, int x) {
+        String newString = "";
+        for (int i = 0; i < x; i++) {
+            newString += OrgString;
+        }
+        return newString;
+    }
 }

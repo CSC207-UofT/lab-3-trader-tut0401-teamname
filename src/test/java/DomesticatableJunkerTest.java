@@ -4,39 +4,39 @@ import static org.junit.Assert.*;
 
 
 public class DomesticatableJunkerTest {
-    DomesticatableJunker CaRTHatHASbEeNDOMeSTiCAteD;
+    DomesticatableJunker car;
 
     @Before
     public void setUp() throws Exception {
-        CaRTHatHASbEeNDOMeSTiCAteD = new DomesticatableJunker();
+        car = new DomesticatableJunker();
     }
 
     @Test(timeout = 50)
     public void TestSound() {
-        assertEquals("VRRRRRRRRRRRRRRROOOOOOOOOOM", CaRTHatHASbEeNDOMeSTiCAteD.sound());
+        assertEquals("VRRRRRRRRRRRRRRROOOOOOOOOOM", car.sound());
     }
 
     @Test(timeout = 50)
     public void TestUpgradeSpeed() {
-        CaRTHatHASbEeNDOMeSTiCAteD.upgradeSpeed();
-        assertEquals(6, CaRTHatHASbEeNDOMeSTiCAteD.getMaxSpeed());
+        car.upgradeSpeed();
+        assertEquals(6, car.getMaxSpeed());
     }
 
     @Test(timeout = 50)
     public void TestDowngradeSpeed() {
-        CaRTHatHASbEeNDOMeSTiCAteD.downgradeSpeed();
-        assertEquals(4, CaRTHatHASbEeNDOMeSTiCAteD.getMaxSpeed());
+        car.downgradeSpeed();
+        assertEquals(4, car.getMaxSpeed());
     }
 
     @Test(timeout = 50)
     public void TestGetPrice() {
-        assertEquals(70, CaRTHatHASbEeNDOMeSTiCAteD.getPrice());
+        assertEquals(70, car.getPrice());
     }
 
     @Test(timeout = 50)
     public void TestGetPriceAfterUpgrade(){
-        CaRTHatHASbEeNDOMeSTiCAteD.upgradeSpeed();
-        assertEquals(80, CaRTHatHASbEeNDOMeSTiCAteD.getPrice());
+        car.upgradeSpeed();
+        assertEquals(80, car.getPrice());
     }
 
 }
