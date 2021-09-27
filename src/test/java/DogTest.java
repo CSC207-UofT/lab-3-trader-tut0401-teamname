@@ -19,4 +19,9 @@ public class DogTest {
     public void TestName() {
         assertEquals("Don", d.getName());
     }
+
+    @Test(timeout = 50)
+    public void TestAge() {
+        assertEquals(true, d.getAge() <= d.getAverageLifespan());
+    }
 }
