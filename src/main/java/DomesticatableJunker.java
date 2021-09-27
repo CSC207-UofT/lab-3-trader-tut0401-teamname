@@ -25,7 +25,6 @@ public class DomesticatableJunker implements Domesticatable, Drivable, Tradable{
     @Override
     public int getMaxSpeed() {
         return MaxSpeed;
-
     }
 
     @Override
@@ -50,5 +49,5 @@ public class DomesticatableJunker implements Domesticatable, Drivable, Tradable{
      * @return a new string that is OrgString concatenated with itself x times
      */
 
-    private static String stringMultiply(String OrgString, int x){ String newString = ""; for (int i = 0; i < x; i++) { newString += OrgString;} return newString; }
+    private static String stringMultiply(String OrgString, int x){ /* Here have this entire method in one line*/ /* Creates the string to be returned */ String newString = ""; /* a for loop that concatenates a string with itself x times */ for (int i = 0; i < x; i++) { /* concatenating the string */ newString += OrgString; } /* returning the string */ return newString; /* An extra comment to emphasize that excess comments are bad */ }
 }
